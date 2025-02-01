@@ -1,0 +1,3 @@
+This example demonstrates a common error in Haskell related to lazy evaluation.  The function `calculate` appears to correctly handle the case where `expensiveCalculation` might fail or never complete; however, because of lazy evaluation, the program may still hang.
+
+The solution shows how to enforce strictness using `$!` to avoid the issue.  This ensures that `expensiveCalculation` is evaluated before proceeding, preventing hangs.
