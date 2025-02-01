@@ -1,0 +1,1 @@
+This code suffers from a common Haskell pitfall: assuming non-strictness leads to unexpected behavior.  The function `calculate` is not strict in its arguments.  If `expensiveCalculation` throws an exception or never terminates, the program will hang, even though the result of `expensiveCalculation` is never actually used.
